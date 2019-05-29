@@ -7,18 +7,26 @@ import android.view.View;
 import android.widget.Button;
 
 public class Main_menu_activity extends AppCompatActivity {
-    private Button button;
+    private Button menuPlayButton;
+    private Button menuOptionsButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu_activity);
-        button = (Button) findViewById(R.id.playButton);
-        button.setOnClickListener(new View.OnClickListener() {
+        menuPlayButton = (Button) findViewById(R.id.playButton);
+        menuPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openPlayActivity();
             }
         });
+        menuOptionsButton= findViewById(R.id.optionButtno);
+        menuOptionsButton.setOnClickListener(new View.OnClickListener(){@Override
+            public void onClick(View v) {
+                openPlayActivity();
+            }
+        });
+
 
     }
     public void openPlayActivity(){
