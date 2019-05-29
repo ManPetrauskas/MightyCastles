@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Options"></activity>
+
+
         <activity android:name=".Main_menu_activity">
             android:screenOrientation="landscape"
             <intent-filter>
@@ -24,6 +25,8 @@
         <activity android:name=".Play">
             android:screenOrientation="landscape"
         </activity>
+        <activity android:name=".Options" >android:screenOrientation="landscape"</activity>
+        <activity android:name=".Gameplay">android:screenOrientation="landscape"</activity>
     </application>
 
 </manifest>
