@@ -14,8 +14,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="240dp"
         android:src="@drawable/drake"
-        android:visibility="invisible" />
 
+
+        />
+    <!--android:visibility="invisible" -->
     <ImageButton
         android:id="@+id/card2Button"
         android:layout_width="96dp"
@@ -24,8 +26,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="140dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/drake"
-        android:visibility="invisible" />
+        android:src="@drawable/castle" />
 
     <ImageButton
         android:id="@+id/card3Button"
@@ -35,8 +36,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="260dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/drake"
-        android:visibility="invisible" />
+        android:src="@drawable/wall"/>
 
     <ImageButton
         android:id="@+id/card4Button"
@@ -46,8 +46,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="380dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/drake"
-        android:visibility="invisible" />
+        android:src="@drawable/drake"/>
 
     <ImageButton
         android:id="@+id/card5Button"
@@ -57,8 +56,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="500dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/drake"
-        android:visibility="invisible" />
+        android:src="@drawable/castle"/>
 
     <ImageButton
         android:id="@+id/card6Button"
@@ -68,8 +66,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="620dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/drake"
-        android:visibility="invisible" />
+        android:src="@drawable/wall"/>
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -80,4 +77,14 @@
         android:layout_marginEnd="31dp"
         android:layout_marginBottom="33dp"
         android:src="@drawable/DeckBack" />
+
+    <Button
+        android:id="@+id/showHand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="302dp"
+        android:layout_marginTop="12dp"
+        android:text="Button" />
 </RelativeLayout>
