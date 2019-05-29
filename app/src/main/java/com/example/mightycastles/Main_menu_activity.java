@@ -23,7 +23,7 @@ public class Main_menu_activity extends AppCompatActivity {
         menuOptionsButton= findViewById(R.id.optionButtno);
         menuOptionsButton.setOnClickListener(new View.OnClickListener(){@Override
             public void onClick(View v) {
-                openPlayActivity();
+                openOptionActivity();
             }
         });
 
@@ -31,6 +31,14 @@ public class Main_menu_activity extends AppCompatActivity {
     }
     public void openPlayActivity(){
         Intent intent = new Intent(this, Play.class);
+        startActivity(intent);
+    }
+    public void openOptionActivity(){
+        Intent intent = new Intent(this, Options.class);
+        startActivity(intent);
+    }
+    public void closeOptionActivity(){
+        Intent intent = new Intent(this, Options.class);
         startActivity(intent);
     }
 }

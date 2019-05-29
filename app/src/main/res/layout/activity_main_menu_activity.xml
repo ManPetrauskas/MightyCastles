@@ -8,22 +8,22 @@
 
     <Button
         android:id="@+id/playButton"
-        android:layout_width="272dp"
+        android:layout_width="285dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="205dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="50dp"
         android:text="Play" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="280dp"
-        android:layout_height="59dp"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="202dp"
-        android:layout_marginTop="118dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="150dp"
         android:text="Card selection (Comming soon)" />
 
     <Button
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="202dp"
-        android:layout_marginTop="215dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="250dp"
         android:text="Options" />
 </RelativeLayout>
