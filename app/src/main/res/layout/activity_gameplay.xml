@@ -162,7 +162,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="380dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/card_drake"
+        android:src="@drawable/card_thief"
         android:visibility="visible" />
 
     <ImageButton
@@ -173,7 +173,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="500dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/card_castle"
+        android:src="@drawable/card_warrior"
         android:visibility="visible" />
 
     <ImageButton
@@ -184,7 +184,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="620dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/card_wall"
+        android:src="@drawable/card_wizard"
         android:visibility="visible" />
 
 
