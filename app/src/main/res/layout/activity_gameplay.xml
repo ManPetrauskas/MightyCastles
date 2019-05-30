@@ -4,7 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <ImageView
+        android:id="@+id/bottomBackCollor"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="278dp"
+        app:srcCompat="@color/colorPrimary" />
+    <ImageButton
+        android:id="@+id/deckButton"
+        android:layout_width="64dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/deckback"
+        android:visibility="visible" />
     <ImageButton
         android:id="@+id/card1Button"
         android:layout_width="96dp"
@@ -68,16 +86,7 @@
         android:layout_marginTop="240dp"
         android:src="@drawable/wall"/>
 
-    <ImageButton
-        android:id="@+id/deckButton"
-        android:layout_width="64dp"
-        android:layout_height="100dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="33dp"
-        android:src="@drawable/deckback"
-        android:visibility="invisible" />
+
 
     <Button
         android:id="@+id/showHand"
@@ -186,4 +195,6 @@
         android:layout_marginStart="567dp"
         android:layout_marginTop="10dp"
         app:srcCompat="@android:color/holo_orange_dark" />
+
+
 </RelativeLayout>
