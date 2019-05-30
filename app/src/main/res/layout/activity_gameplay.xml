@@ -4,26 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/item_gameplaybackground">
+    android:background="@drawable/background_gameplay">
 
     <ImageView
         android:id="@+id/player1Wall"
-        android:layout_width="50dp"
-        android:layout_height="220dp"
+        android:layout_width="88dp"
+        android:layout_height="218dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="275dp"
-        android:layout_marginTop="60dp"
-        app:srcCompat="@android:color/holo_orange_dark" />
+        android:layout_marginStart="255dp"
+        android:layout_marginTop="89dp"
+        app:srcCompat="@drawable/item_wall" />
     <ImageView
         android:id="@+id/player2Wall"
-        android:layout_width="50dp"
-        android:layout_height="220dp"
+        android:layout_width="88dp"
+        android:layout_height="218dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="409dp"
-        android:layout_marginTop="60dp"
-        app:srcCompat="@android:color/holo_orange_dark" />
+        android:layout_marginStart="391dp"
+        android:layout_marginTop="89dp"
+        app:srcCompat="@drawable/item_wall" />
 
     <ImageView
         android:id="@+id/player1Castle"
@@ -83,6 +83,7 @@
         android:layout_marginBottom="20dp"
         android:src="@drawable/item_deckback"
         android:visibility="visible" />
+
     <ImageButton
         android:id="@+id/card1Button"
         android:layout_width="96dp"
@@ -94,7 +95,7 @@
         android:src="@drawable/card_drake"
 
 
-        />
+        android:visibility="invisible" />
     <!--android:visibility="invisible" -->
     <ImageButton
         android:id="@+id/card2Button"
@@ -104,7 +105,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="140dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/card_castle" />
+        android:src="@drawable/card_castle"
+        android:visibility="invisible" />
 
     <ImageButton
         android:id="@+id/card3Button"
@@ -114,7 +116,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="260dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/card_wall"/>
+        android:src="@drawable/card_wall"
+        android:visibility="invisible" />
 
     <ImageButton
         android:id="@+id/card4Button"
@@ -124,7 +127,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="380dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/card_drake"/>
+        android:src="@drawable/card_drake"
+        android:visibility="invisible" />
 
     <ImageButton
         android:id="@+id/card5Button"
@@ -134,7 +138,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="500dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/card_castle"/>
+        android:src="@drawable/card_castle"
+        android:visibility="invisible" />
 
     <ImageButton
         android:id="@+id/card6Button"
@@ -144,7 +149,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="620dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/card_wall"/>
+        android:src="@drawable/card_wall"
+        android:visibility="invisible" />
 
 
 
@@ -237,7 +243,15 @@
         android:layout_marginTop="10dp"
         app:srcCompat="@drawable/icon_wall" />
 
-
+    <ImageView
+        android:id="@+id/player2Graveyard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="244dp"
+        android:layout_marginBottom="122dp"
+        app:srcCompat="@android:color/transparent" />
 
 
 </RelativeLayout>
