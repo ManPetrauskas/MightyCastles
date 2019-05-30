@@ -5,7 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/player1Castle"
+        android:layout_width="130dp"
+        android:layout_height="220dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@android:color/holo_purple" />
 
+    <ImageView
+        android:id="@+id/player2Castle"
+        android:layout_width="130dp"
+        android:layout_height="220dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="494dp"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@android:color/holo_purple" />
 
     <ImageView
         android:id="@+id/bottomBackCollor"
@@ -128,7 +146,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="110dp"
         android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/mana" />
+        app:srcCompat="@drawable/castleicon" />
 
     <ImageView
         android:id="@+id/player2HealthIcon"
@@ -137,7 +155,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="582dp"
         android:layout_marginTop="10dp"
-        app:srcCompat="@android:color/holo_red_dark" />
+        app:srcCompat="@drawable/castleicon" />
 
     <TextView
         android:id="@+id/player1HealthTxt"
@@ -145,8 +163,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="54dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="20dp"
         android:text="HP" />
 
     <TextView
@@ -155,8 +173,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="54dp"
+        android:layout_marginStart="247dp"
+        android:layout_marginTop="20dp"
         android:text="Wall" />
 
     <TextView
@@ -185,9 +203,9 @@
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="155dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="10dp"
-        app:srcCompat="@android:color/holo_orange_dark" />
+        app:srcCompat="@drawable/wallicon" />
 
     <ImageView
         android:id="@+id/player2WallIcon"
@@ -197,7 +215,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="537dp"
         android:layout_marginTop="10dp"
-        app:srcCompat="@android:color/holo_orange_dark" />
+        app:srcCompat="@drawable/wallicon" />
+
+
 
 
 </RelativeLayout>
