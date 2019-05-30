@@ -198,5 +198,15 @@
         android:layout_marginTop="10dp"
         app:srcCompat="@android:color/holo_orange_dark" />
 
+    <ImageView
+        android:id="@+id/player2WallIcon2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@android:color/holo_purple" />
+
 
 </RelativeLayout>
