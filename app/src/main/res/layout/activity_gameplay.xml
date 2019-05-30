@@ -76,7 +76,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="31dp"
         android:layout_marginBottom="33dp"
-        android:src="@drawable/DeckBack"
+        android:src="@drawable/deckback"
         android:visibility="invisible" />
 
     <Button
