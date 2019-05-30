@@ -125,7 +125,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="80dp"
         android:layout_marginTop="10dp"
-        app:srcCompat="@android:color/holo_red_dark" />
+        app:srcCompat="@drawable/mana" />
 
     <ImageView
         android:id="@+id/player2HealthIcon"
