@@ -6,6 +6,25 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/player1Wall"
+        android:layout_width="50dp"
+        android:layout_height="220dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@android:color/holo_orange_dark" />
+    <ImageView
+        android:id="@+id/player2Wall"
+        android:layout_width="50dp"
+        android:layout_height="220dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="409dp"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@android:color/holo_orange_dark" />
+
+    <ImageView
         android:id="@+id/player1Castle"
         android:layout_width="130dp"
         android:layout_height="220dp"
