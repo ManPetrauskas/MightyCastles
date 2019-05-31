@@ -146,7 +146,7 @@ public class Gameplay extends AppCompatActivity {
         int rMax = this.player1Deck.size() - 1;
         int randomNumber = r.nextInt((rMax)+1);
 
-        if (rMax >= 0){
+        if (rMax >= 0 && this.player1Hand.size()<5 && this.player1Deck.size()>=1){
             this.player1Hand.add(this.player1Deck.get(randomNumber));
             this.player1Deck.remove(randomNumber);
         }
@@ -157,7 +157,7 @@ public class Gameplay extends AppCompatActivity {
         int rMax = this.player2Deck.size() - 1;
         int randomNumber = r.nextInt((rMax)+1);
 
-        if (rMax >= 0){
+        if (rMax >= 0 && this.player2Hand.size()<5 && this.player2Deck.size()>=1){
             this.player2Hand.add(this.player2Deck.get(randomNumber));
             this.player2Deck.remove(randomNumber);
         }
