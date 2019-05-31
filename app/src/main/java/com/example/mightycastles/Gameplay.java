@@ -132,7 +132,25 @@ public class Gameplay extends AppCompatActivity {
             findViewById(R.id.card6Button).setVisibility(View.VISIBLE);
         }
     }
-    public void drawCard(){
+    public void player1Draw(){
+        Random r = new Random();
+        int rMax = this.player1Deck.size() - 1;
+        int randomNumber = r.nextInt((rMax)+1);
 
+        if (rMax >= 0){
+            this.player1Hand.add(this.player1Deck.get(randomNumber));
+            this.player1Deck.remove(randomNumber);
+        }
+    }
+
+    public void player2Draw(){
+        Random r = new Random();
+        int rMax = this.player2Deck.size() - 1;
+        int randomNumber = r.nextInt((rMax)+1);
+
+        if (rMax >= 0){
+            this.player2Hand.add(this.player2Deck.get(randomNumber));
+            this.player2Deck.remove(randomNumber);
+        }
     }
 }
