@@ -15,6 +15,10 @@ import java.util.List;
 public class Gameplay extends AppCompatActivity {
     private Button handButton;
     private Button player1DeckButton;
+    private List<Card> player1Deck;
+    private List<Card> player2Deck;
+    private List<Card> player1Hand;
+    private List<Card> player2Hand;
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +64,8 @@ public class Gameplay extends AppCompatActivity {
                 2
         );
         //new
-        List<Card> player1Deck=new ArrayList<>();
-        List<Card> player1Hand=new ArrayList<>();
+        this.player1Deck=new ArrayList<>();
+        this.player1Hand=new ArrayList<>();
         player1Deck.add(cardCollection.get(5));
         player1Deck.add(cardCollection.get(4));
         player1Deck.add(cardCollection.get(3));
