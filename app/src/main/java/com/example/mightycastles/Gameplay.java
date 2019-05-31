@@ -20,7 +20,12 @@ public class Gameplay extends AppCompatActivity {
             }
         });
 
-        //cum
+        List<Card> cardCollection = Array.asList(
+                new card (0, "Castle_plus", 0, 3, 0, 3, "Bricks", "@drawable/card_bricks"),
+                new card (1, "Drake", 21, 0, 0, 21, "Mana", "@drawable/card_drake"),
+                new card (2, "Thief", 0, 0, 21, 21, "Weapons", "@drawable/card_thief")
+                
+        );
 
     }
     public void showCardsToggle(){
