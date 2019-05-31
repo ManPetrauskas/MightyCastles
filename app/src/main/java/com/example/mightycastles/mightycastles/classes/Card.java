@@ -9,8 +9,9 @@ public class Card {
    private int price_weapons;
    private int calculation;
    private String use;
+   private String pictureName;
 
-    public Card(int id, String name, int price_mana, int price_bricks, int price_weapons, int calculation, String use) {
+    public Card(int id, String name, int price_mana, int price_bricks, int price_weapons, int calculation, String use, String pictureName) {
         this.id = id;
         this.name = name;
         this.price_mana = price_mana;
@@ -18,6 +19,7 @@ public class Card {
         this.price_weapons = price_weapons;
         this.calculation = calculation;
         this.use = use;
+        this.pictureName = pictureName;
     }
 
     public int getId() {
@@ -46,5 +48,9 @@ public class Card {
 
     public String getUse() {
         return use;
+    }
+
+    public String getPictureName(){
+        return pictureName;
     }
 }

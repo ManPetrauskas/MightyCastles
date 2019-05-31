@@ -19,6 +19,8 @@ public class Gameplay extends AppCompatActivity {
                 showCardsToggle();
             }
         });
+
+        
     }
     public void showCardsToggle(){
         if (findViewById(R.id.card1Button).getVisibility() ==View.VISIBLE){
