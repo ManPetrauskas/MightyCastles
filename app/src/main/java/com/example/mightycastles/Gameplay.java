@@ -64,6 +64,25 @@ public class Gameplay extends AppCompatActivity {
                 2
         );
 
+        List<Card> player2Deck = new ArrayList<>();
+        List<Card> player2Hand = new ArrayList<>();
+        player2Deck.add(cardCollection.get(5));
+        player2Deck.add(cardCollection.get(4));
+        player2Deck.add(cardCollection.get(3));
+        player2Deck.add(cardCollection.get(2));
+        player2Deck.add(cardCollection.get(1));
+        player2Deck.add(cardCollection.get(0));
+        player2Deck.add(cardCollection.get(1));
+        player2Deck.add(cardCollection.get(2));
+        player2Deck.add(cardCollection.get(3));
+        player2Deck.add(cardCollection.get(4));
+        player2Deck.add(cardCollection.get(5));
+        player2Deck.add(cardCollection.get(4));
+        player2Deck.add(cardCollection.get(3));
+        player2Deck.add(cardCollection.get(2));
+        player2Deck.add(cardCollection.get(1));
+
+
     }
     public void showCardsToggle(){
         if (findViewById(R.id.card1Button).getVisibility() ==View.VISIBLE){
