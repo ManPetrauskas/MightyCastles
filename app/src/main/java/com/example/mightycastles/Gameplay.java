@@ -49,7 +49,23 @@ public class Gameplay extends AppCompatActivity {
                 2
         );
         //new
-
+        List<Card> player1Deck=new ArrayList<>();
+        List<Card> player1Hand=new ArrayList<>();
+        player1Deck.add(cardCollection.get(5));
+        player1Deck.add(cardCollection.get(4));
+        player1Deck.add(cardCollection.get(3));
+        player1Deck.add(cardCollection.get(2));
+        player1Deck.add(cardCollection.get(1));
+        player1Deck.add(cardCollection.get(0));
+        player1Deck.add(cardCollection.get(1));
+        player1Deck.add(cardCollection.get(2));
+        player1Deck.add(cardCollection.get(3));
+        player1Deck.add(cardCollection.get(4));
+        player1Deck.add(cardCollection.get(5));
+        player1Deck.add(cardCollection.get(4));
+        player1Deck.add(cardCollection.get(3));
+        player1Deck.add(cardCollection.get(2));
+        player1Deck.add(cardCollection.get(1));
         //Player  2
         Castle player2Castle = new Castle(
                 2,
