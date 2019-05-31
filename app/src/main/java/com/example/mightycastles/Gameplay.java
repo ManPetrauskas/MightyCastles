@@ -16,6 +16,7 @@ import java.util.Random;
 public class Gameplay extends AppCompatActivity {
     private Button handButton;
     private Button player1DeckButton;
+    private Button player2DeckButton;
     private List<Card> player1Deck;
     private List<Card> player2Deck;
     private List<Card> player1Hand;
@@ -38,7 +39,15 @@ public class Gameplay extends AppCompatActivity {
         player1DeckButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showCardsToggle();
+                player1Draw();
+            }
+        });
+
+        player2DeckButton = (Button) findViewById(R.id.player2DeckButton);
+        player2DeckButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                player2Draw();
             }
         });
 
