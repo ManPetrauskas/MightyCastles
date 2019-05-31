@@ -11,6 +11,7 @@ import com.example.mightycastles.mightycastles.classes.Castle;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Gameplay extends AppCompatActivity {
     private Button handButton;
@@ -66,21 +67,21 @@ public class Gameplay extends AppCompatActivity {
         //new
         this.player1Deck=new ArrayList<>();
         this.player1Hand=new ArrayList<>();
-        player1Deck.add(cardCollection.get(5));
-        player1Deck.add(cardCollection.get(4));
-        player1Deck.add(cardCollection.get(3));
-        player1Deck.add(cardCollection.get(2));
-        player1Deck.add(cardCollection.get(1));
-        player1Deck.add(cardCollection.get(0));
-        player1Deck.add(cardCollection.get(1));
-        player1Deck.add(cardCollection.get(2));
-        player1Deck.add(cardCollection.get(3));
-        player1Deck.add(cardCollection.get(4));
-        player1Deck.add(cardCollection.get(5));
-        player1Deck.add(cardCollection.get(4));
-        player1Deck.add(cardCollection.get(3));
-        player1Deck.add(cardCollection.get(2));
-        player1Deck.add(cardCollection.get(1));
+        this.player1Deck.add(cardCollection.get(5));
+        this.player1Deck.add(cardCollection.get(4));
+        this.player1Deck.add(cardCollection.get(3));
+        this.player1Deck.add(cardCollection.get(2));
+        this.player1Deck.add(cardCollection.get(1));
+        this.player1Deck.add(cardCollection.get(0));
+        this.player1Deck.add(cardCollection.get(1));
+        this.player1Deck.add(cardCollection.get(2));
+        this.player1Deck.add(cardCollection.get(3));
+        this.player1Deck.add(cardCollection.get(4));
+        this.player1Deck.add(cardCollection.get(5));
+        this.player1Deck.add(cardCollection.get(4));
+        this.player1Deck.add(cardCollection.get(3));
+        this.player1Deck.add(cardCollection.get(2));
+        this.player1Deck.add(cardCollection.get(1));
         //Player  2
         Castle player2Castle = new Castle(
                 2,
@@ -95,23 +96,23 @@ public class Gameplay extends AppCompatActivity {
                 2
         );
 
-        List<Card> player2Deck = new ArrayList<>();
-        List<Card> player2Hand = new ArrayList<>();
-        player2Deck.add(cardCollection.get(5));
-        player2Deck.add(cardCollection.get(4));
-        player2Deck.add(cardCollection.get(3));
-        player2Deck.add(cardCollection.get(2));
-        player2Deck.add(cardCollection.get(1));
-        player2Deck.add(cardCollection.get(0));
-        player2Deck.add(cardCollection.get(1));
-        player2Deck.add(cardCollection.get(2));
-        player2Deck.add(cardCollection.get(3));
-        player2Deck.add(cardCollection.get(4));
-        player2Deck.add(cardCollection.get(5));
-        player2Deck.add(cardCollection.get(4));
-        player2Deck.add(cardCollection.get(3));
-        player2Deck.add(cardCollection.get(2));
-        player2Deck.add(cardCollection.get(1));
+        this.player2Deck = new ArrayList<>();
+        this.player2Hand = new ArrayList<>();
+        this.player2Deck.add(cardCollection.get(5));
+        this.player2Deck.add(cardCollection.get(4));
+        this.player2Deck.add(cardCollection.get(3));
+        this.player2Deck.add(cardCollection.get(2));
+        this.player2Deck.add(cardCollection.get(1));
+        this.player2Deck.add(cardCollection.get(0));
+        this.player2Deck.add(cardCollection.get(1));
+        this.player2Deck.add(cardCollection.get(2));
+        this.player2Deck.add(cardCollection.get(3));
+        this.player2Deck.add(cardCollection.get(4));
+        this.player2Deck.add(cardCollection.get(5));
+        this.player2Deck.add(cardCollection.get(4));
+        this.player2Deck.add(cardCollection.get(3));
+        this.player2Deck.add(cardCollection.get(2));
+        this.player2Deck.add(cardCollection.get(1));
 
 
     }
