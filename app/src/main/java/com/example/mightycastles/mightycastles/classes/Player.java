@@ -1,12 +1,14 @@
 package com.example.mightycastles.mightycastles.classes;
 
+import java.util.List;
+
 public class Player {
     private int id;
-    private Card[] cardsInHand;
-    private Card[] cardsInDeck;
+    private List<Card> cardsInHand;
+    private List<Card> cardsInDeck;
     private Castle playerCastle;
 
-    public Player(int id, Card[] cardsInHand, Card[] cardsInDeck, Castle playerCastle) {
+    public Player(int id, List<Card> cardsInHand, List<Card> cardsInDeck, Castle playerCastle) {
         this.id = id;
         this.cardsInHand = cardsInHand;
         this.cardsInDeck = cardsInDeck;
@@ -17,11 +19,11 @@ public class Player {
         return id;
     }
 
-    public Card[] getCardsInHand() {
+    public List<Card> getCardsInHand() {
         return cardsInHand;
     }
 
-    public Card[] getCardsInDeck() {
+    public List<Card> getCardsInDeck() {
         return cardsInDeck;
     }
 
@@ -29,19 +31,19 @@ public class Player {
         return playerCastle;
     }
 
-    public void setCardsInHand(Card[] cardsInHand) {
+    public void setCardsInHand(List<Card> cardsInHand) {
         this.cardsInHand = cardsInHand;
     }
 
-    public void setCardsInDeck(Card[] cardsInDeck) {
+    public void setCardsInDeck(List<Card> cardsInDeck) {
         this.cardsInDeck = cardsInDeck;
     }
     public void setOneCardsInHand(Card cardsInHand,int index) {
-        this.cardsInHand[index] = cardsInHand;
+        this.cardsInHand.set(index,cardsInHand);
     }
 
     public void setOneCardsInDeck(Card cardsInDeck,int index) {
-        this.cardsInDeck[index] = cardsInDeck;
+        this.cardsInDeck.set(index,cardsInDeck);
     }
 
     public void setPlayerCastle(Castle playerCastle) {

@@ -48,6 +48,8 @@ public class Gameplay extends AppCompatActivity {
                 10,
                 2
         );
+        //new
+
         //Player  2
         Castle player2Castle = new Castle(
                 2,
