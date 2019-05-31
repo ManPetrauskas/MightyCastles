@@ -33,7 +33,9 @@ public class Gameplay extends AppCompatActivity {
             cardCollection.add( new Card (3, "Wall", 0, 3, 0, 10, "Wall", "@drawable/card_wall"));
             cardCollection.add( new Card (4, "Warrior", 0, 0, 10, 25, "Enemy_castle", "@drawable/card_warrior"));
             cardCollection.add( new Card (5, "Wizard", 21, 0, 0, 40, "Enemy_castle", "@drawable/card_wizard"));
-            //Player 1
+
+
+        //Player 1
         Castle player1Castle = new Castle(
                 1,
                 "Player1",
