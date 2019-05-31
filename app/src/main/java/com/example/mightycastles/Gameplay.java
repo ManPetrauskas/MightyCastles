@@ -143,7 +143,7 @@ public class Gameplay extends AppCompatActivity {
         }
     }
 
-    public void player2Draw(){
+    public void player2Draw(){  //your turn yugi, draw your last pathetic card
         Random r = new Random();
         int rMax = this.player2Deck.size() - 1;
         int randomNumber = r.nextInt((rMax)+1);
