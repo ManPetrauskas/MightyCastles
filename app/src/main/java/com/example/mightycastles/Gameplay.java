@@ -1,5 +1,6 @@
 package com.example.mightycastles;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ import java.util.List;
 
 public class Gameplay extends AppCompatActivity {
     private Button handButton;
+    private Button player1DeckButton;
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +23,14 @@ public class Gameplay extends AppCompatActivity {
 
         handButton = (Button) findViewById(R.id.showHand);
         handButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCardsToggle();
+            }
+        });
+
+        player1DeckButton = (Button) findViewById(R.id.player1DeckButton);
+        player1DeckButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showCardsToggle();
@@ -115,5 +126,8 @@ public class Gameplay extends AppCompatActivity {
             findViewById(R.id.card5Button).setVisibility(View.VISIBLE);
             findViewById(R.id.card6Button).setVisibility(View.VISIBLE);
         }
+    }
+    public void drawCard(){
+
     }
 }
