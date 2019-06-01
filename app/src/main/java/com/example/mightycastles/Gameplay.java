@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.mightycastles.mightycastles.classes.Card;
 import com.example.mightycastles.mightycastles.classes.Castle;
@@ -18,6 +19,13 @@ public class Gameplay extends AppCompatActivity {
     private Button handButton;
     private Button player1DeckButton;
     private Button player2DeckButton;
+    //Card buttons
+    private ImageButton cardButton1;
+    private ImageButton  cardButton2;
+    private ImageButton  cardButton3;
+    private ImageButton  cardButton4;
+    private ImageButton  cardButton5;
+    private ImageButton  cardButton6;
     //Cards
     private List<Card> player1Deck;
     private List<Card> player2Deck;
@@ -28,31 +36,41 @@ public class Gameplay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameplay);
+        //Button declaration
 
-        handButton = (Button) findViewById(R.id.showHand);
-        handButton.setOnClickListener(new View.OnClickListener() {
+        this.cardButton1 = findViewById(R.id.card1Button);
+        this.cardButton2 = findViewById(R.id.card2Button);
+        this.cardButton3 = findViewById(R.id.card3Button);
+        this.cardButton4 = findViewById(R.id.card4Button);
+        this.cardButton5 = findViewById(R.id.card5Button);
+        this.cardButton6 = findViewById(R.id.card6Button);
+
+        //Buttons
+        this.handButton = (Button) findViewById(R.id.showHand);
+        this.handButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showCardsToggle();
             }
         });
 
-        player1DeckButton = (Button) findViewById(R.id.player1DeckButton);
-        player1DeckButton.setOnClickListener(new View.OnClickListener() {
+        this.player1DeckButton = (Button) findViewById(R.id.player1DeckButton);
+        this.player1DeckButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 player1Draw();
             }
         });
 
-        player2DeckButton = (Button) findViewById(R.id.player2DeckButton);
-        player2DeckButton.setOnClickListener(new View.OnClickListener() {
+        this.player2DeckButton = (Button) findViewById(R.id.player2DeckButton);
+        this.player2DeckButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 player2Draw();
             }
         });
 
+        //Card List creation
         List<Card> cardCollection = new ArrayList<Card>();
             cardCollection.add( new Card (0, "Castle", 0, 3, 0, 10, "Castle", "@drawable/card_bricks"));
             cardCollection.add( new Card (1, "Drake", 21, 0, 0, 40, "Enemy_castle", "@drawable/card_drake"));
@@ -75,7 +93,6 @@ public class Gameplay extends AppCompatActivity {
                 10,
                 2
         );
-        //new
         this.player1Deck=new ArrayList<>();
         this.player1Hand=new ArrayList<>();
         this.player1Deck.add(cardCollection.get(5));
@@ -165,7 +182,82 @@ public class Gameplay extends AppCompatActivity {
         }
     }
 
-    public void refreshHand(){
+    public void refreshHandPlayer1(){
+        if(this.player1Hand.size()>=1){
+            this.cardButton1.setImageResource(findPictureId(this.player1Hand.get(0).getPictureName()));
+            this.cardButton1.setVisibility(View.VISIBLE);
+            if(this.player1Hand.size()>=2){
+                this.cardButton2.setImageResource(findPictureId(this.player1Hand.get(1).getPictureName()));
+                this.cardButton2.setVisibility(View.VISIBLE);
+                if(this.player1Hand.size()>=3){
+                    this.cardButton3.setImageResource(findPictureId(this.player1Hand.get(2).getPictureName()));
+                    this.cardButton3.setVisibility(View.VISIBLE);
+                    if(this.player1Hand.size()>=4){
+                        this.cardButton4.setImageResource(findPictureId(this.player1Hand.get(3).getPictureName()));
+                        this.cardButton4.setVisibility(View.VISIBLE);
+                        if(this.player1Hand.size()>=5){
+                            this.cardButton5.setImageResource(findPictureId(this.player1Hand.get(4).getPictureName()));
+                            this.cardButton5.setVisibility(View.VISIBLE);
+                            if(this.player1Hand.size()==6){
+                                this.cardButton2.setImageResource(findPictureId(this.player1Hand.get(6).getPictureName()));
+                                this.cardButton2.setVisibility(View.VISIBLE);
+                            }
+                            else {
+                                this.cardButton6.setVisibility(View.INVISIBLE);
+                            }
+                        }
+                        else {
+                            this.cardButton5.setVisibility(View.INVISIBLE);
+                            this.cardButton6.setVisibility(View.INVISIBLE);
+                        }
+                    }
+                    else {
+                        this.cardButton4.setVisibility(View.INVISIBLE);
+                        this.cardButton5.setVisibility(View.INVISIBLE);
+                        this.cardButton6.setVisibility(View.INVISIBLE);
+                    }
+                }
+                else {
+                    this.cardButton3.setVisibility(View.INVISIBLE);
+                    this.cardButton4.setVisibility(View.INVISIBLE);
+                    this.cardButton5.setVisibility(View.INVISIBLE);
+                    this.cardButton6.setVisibility(View.INVISIBLE);
+                }
+            }
+            else {
+                this.cardButton2.setVisibility(View.INVISIBLE);
+                this.cardButton3.setVisibility(View.INVISIBLE);
+                this.cardButton4.setVisibility(View.INVISIBLE);
+                this.cardButton5.setVisibility(View.INVISIBLE);
+                this.cardButton6.setVisibility(View.INVISIBLE);
+            }
+        }
+        else{
+            this.cardButton1.setVisibility(View.INVISIBLE);
+            this.cardButton2.setVisibility(View.INVISIBLE);
+            this.cardButton3.setVisibility(View.INVISIBLE);
+            this.cardButton4.setVisibility(View.INVISIBLE);
+            this.cardButton5.setVisibility(View.INVISIBLE);
+            this.cardButton6.setVisibility(View.INVISIBLE);
+        }
+    }
+    public int findPictureId(String imageName){
+        switch (imageName){
+            case "CastleCard":
+                return R.drawable.card_castle;
 
+            case "DrakeCard":
+                return R.drawable.card_drake;
+            case "ThiefCard":
+                return R.drawable.card_thief;
+
+            case "WallCard":
+                return R.drawable.card_wall;
+            case "WarriorCard":
+                return R.drawable.card_warrior;
+            case "WizzardCard":
+                return R.drawable.card_wizard;
+        }
+        return R.drawable.icon_castle;
     }
 }
