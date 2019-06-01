@@ -14,9 +14,11 @@ import java.util.List;
 import java.util.Random;
 
 public class Gameplay extends AppCompatActivity {
+    //buttons
     private Button handButton;
     private Button player1DeckButton;
     private Button player2DeckButton;
+    //Cards
     private List<Card> player1Deck;
     private List<Card> player2Deck;
     private List<Card> player1Hand;
@@ -161,5 +163,9 @@ public class Gameplay extends AppCompatActivity {
             this.player2Hand.add(this.player2Deck.get(randomNumber));
             this.player2Deck.remove(randomNumber);
         }
+    }
+
+    public void refreshHand(){
+
     }
 }
