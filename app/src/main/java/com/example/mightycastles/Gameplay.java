@@ -31,11 +31,14 @@ public class Gameplay extends AppCompatActivity {
     private List<Card> player2Deck;
     private List<Card> player1Hand;
     private List<Card> player2Hand;
+    //show
+    private boolean showMyHand;
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameplay);
+        showMyHand=false;
         //Button declaration
 
         this.cardButton1 = findViewById(R.id.card1Button);
@@ -145,12 +148,9 @@ public class Gameplay extends AppCompatActivity {
 
     }
     public void showCardsToggle(){
-        if (findViewById(R.id.card1Button).getVisibility() ==View.VISIBLE){
-            findViewById(R.id.card2Button).setVisibility(View.INVISIBLE);
-            findViewById(R.id.card3Button).setVisibility(View.INVISIBLE);
-            findViewById(R.id.card4Button).setVisibility(View.INVISIBLE);
-            findViewById(R.id.card5Button).setVisibility(View.INVISIBLE);
-            findViewById(R.id.card6Button).setVisibility(View.INVISIBLE);
+        if (this.showMyHand){
+            refreshHandPlayer1();
+            this.showMyHand=false;
         }
         else{
             findViewById(R.id.card2Button).setVisibility(View.VISIBLE);
@@ -158,6 +158,7 @@ public class Gameplay extends AppCompatActivity {
             findViewById(R.id.card4Button).setVisibility(View.VISIBLE);
             findViewById(R.id.card5Button).setVisibility(View.VISIBLE);
             findViewById(R.id.card6Button).setVisibility(View.VISIBLE);
+            this.showMyHand=true;
         }
     }
     public void player1Draw(){
