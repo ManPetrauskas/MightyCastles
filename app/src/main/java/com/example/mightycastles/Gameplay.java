@@ -192,24 +192,24 @@ public class Gameplay extends AppCompatActivity {
         }
     }
 
-    public void refreshHandPlayer1(){
-        if(this.player1Hand.size()>=1){
-            this.cardButton1.setImageResource(findPictureId(this.player1Hand.get(0).getPictureName()));
+    public void refreshHandPlayer1(Player player1){
+        if(player1.getCardsInHand().size()>=1){
+            this.cardButton1.setImageResource(findPictureId(player1.getCardsInHand().get(0).getPictureName()));
             this.cardButton1.setVisibility(View.VISIBLE);
-            if(this.player1Hand.size()>=2){
-                this.cardButton2.setImageResource(findPictureId(this.player1Hand.get(1).getPictureName()));
+            if(player1.getCardsInHand().size()>=2){
+                this.cardButton2.setImageResource(findPictureId(player1.getCardsInHand().get(1).getPictureName()));
                 this.cardButton2.setVisibility(View.VISIBLE);
-                if(this.player1Hand.size()>=3){
-                    this.cardButton3.setImageResource(findPictureId(this.player1Hand.get(2).getPictureName()));
+                if(player1.getCardsInHand().size()>=3){
+                    this.cardButton3.setImageResource(findPictureId(player1.getCardsInHand().get(2).getPictureName()));
                     this.cardButton3.setVisibility(View.VISIBLE);
-                    if(this.player1Hand.size()>=4){
-                        this.cardButton4.setImageResource(findPictureId(this.player1Hand.get(3).getPictureName()));
+                    if(player1.getCardsInHand().size()>=4){
+                        this.cardButton4.setImageResource(findPictureId(player1.getCardsInHand().get(3).getPictureName()));
                         this.cardButton4.setVisibility(View.VISIBLE);
-                        if(this.player1Hand.size()>=5){
-                            this.cardButton5.setImageResource(findPictureId(this.player1Hand.get(4).getPictureName()));
+                        if(player1.getCardsInHand().size()>=5){
+                            this.cardButton5.setImageResource(findPictureId(player1.getCardsInHand().get(4).getPictureName()));
                             this.cardButton5.setVisibility(View.VISIBLE);
-                            if(this.player1Hand.size()==6){
-                                this.cardButton2.setImageResource(findPictureId(this.player1Hand.get(6).getPictureName()));
+                            if(player1.getCardsInHand().size()==6){
+                                this.cardButton2.setImageResource(findPictureId(player1.getCardsInHand().get(6).getPictureName()));
                                 this.cardButton2.setVisibility(View.VISIBLE);
                             }
                             else {
