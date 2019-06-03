@@ -274,7 +274,28 @@ public class Gameplay extends AppCompatActivity {
         //refresh player1
         this.resourceText=(TextView)findViewById(R.id.player1Bricks);
         resourceText.setText(plr1.getPlayerCastle().getBricks());
+        this.resourceText=(TextView)findViewById(R.id.player1Worker);
+        resourceText.setText(plr1.getPlayerCastle().getBuilders());
+        this.resourceText=(TextView)findViewById(R.id.player1Mana);
+        resourceText.setText(plr1.getPlayerCastle().getMana());
+        this.resourceText=(TextView)findViewById(R.id.player1Magic);
+        resourceText.setText(plr1.getPlayerCastle().getMagic());
+        this.resourceText=(TextView)findViewById(R.id.player1Weapons);
+        resourceText.setText(plr1.getPlayerCastle().getWeapons());
+        this.resourceText=(TextView)findViewById(R.id.player1Blacksmith);
+        resourceText.setText(plr1.getPlayerCastle().getBlacksmith());
         //refresh player2
-
+        this.resourceText=(TextView)findViewById(R.id.player2Bricks);
+        resourceText.setText(plr2.getPlayerCastle().getBricks());
+        this.resourceText=(TextView)findViewById(R.id.player2Worker);
+        resourceText.setText(plr2.getPlayerCastle().getBuilders());
+        this.resourceText=(TextView)findViewById(R.id.player2Mana);
+        resourceText.setText(plr2.getPlayerCastle().getMana());
+        this.resourceText=(TextView)findViewById(R.id.player2Magic);
+        resourceText.setText(plr2.getPlayerCastle().getMagic());
+        this.resourceText=(TextView)findViewById(R.id.player2Weapons);
+        resourceText.setText(plr2.getPlayerCastle().getWeapons());
+        this.resourceText=(TextView)findViewById(R.id.player2Blacksmith);
+        resourceText.setText(plr2.getPlayerCastle().getBlacksmith());
     }
 }
