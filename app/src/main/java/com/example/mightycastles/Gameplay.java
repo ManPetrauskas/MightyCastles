@@ -80,7 +80,7 @@ public class Gameplay extends AppCompatActivity {
         //Card List creation
         List<Card> cardCollection = new ArrayList<Card>();
             cardCollection.add( new Card (0, "Castle", 0, 3, 0, 10, "Castle", "CastleCard"));
-            cardCollection.add( new Card (1, "Drake", 21, 0, 0, 40, "Enemy_castle", "DrakeCard"));
+            cardCollection.add( new Card (1, "Drake", 21, 0, 0, -40, "Enemy_castle", "DrakeCard"));
             cardCollection.add( new Card (2, "Thief", 0, 0, 21, 20, "All_resources", "ThiefCard"));
             cardCollection.add( new Card (3, "Wall", 0, 3, 0, 10, "Wall", "WallCard"));
             cardCollection.add( new Card (4, "Warrior", 0, 0, 10, 25, "Enemy_castle", "WarriorCard"));
@@ -299,8 +299,10 @@ public class Gameplay extends AppCompatActivity {
         resourceText.setText(plr2.getPlayerCastle().getBlacksmith());
     }
 
-    public void useCardButton1(){
+    public void useCardButton1(Player player){
+        if (player.getCardsInHand().size() >= 1){
 
+        }
     }
 
     public void useCardButton2(){
@@ -321,5 +323,18 @@ public class Gameplay extends AppCompatActivity {
 
     public void useCardButton6(){
 
+    }
+
+    public void cardUse(Card card, Player player1, Player player2){
+        switch (card.getUse()){
+            case "Castle":
+                player1.getPlayerCastle().addCastleHealth(card.getCalculation());
+                break;
+            case "Enemy_Castle":
+                player2.getPlayerCastle().addCastleHealth(card.getCalculation());
+                break;
+            case "All_resources":
+                
+        }
     }
 }

@@ -96,4 +96,8 @@ public class Castle {
     public void setBlacksmith(int blacksmith) {
         this.blacksmith = blacksmith;
     }
+
+    public void addCastleHealth(int plus){
+        this.castleHealth+=plus;
+    }
 }
