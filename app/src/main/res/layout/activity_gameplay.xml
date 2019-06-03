@@ -406,7 +406,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="313dp"
         android:layout_marginTop="68dp"
-        android:text="Next turn" />
+        android:text="Next turn"
+        android:visibility="invisible" />
 
 
 </RelativeLayout>
