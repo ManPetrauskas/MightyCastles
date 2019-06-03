@@ -226,7 +226,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="155dp"
         android:layout_marginTop="20dp"
-        android:text="HP" />
+        android:text="100" />
 
     <TextView
         android:id="@+id/player1WallTxt"
@@ -236,7 +236,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="247dp"
         android:layout_marginTop="20dp"
-        android:text="Wall" />
+        android:text="100" />
 
     <TextView
         android:id="@+id/player2WallTxt"
@@ -246,7 +246,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="447dp"
         android:layout_marginTop="20dp"
-        android:text="wall" />
+        android:text="100" />
 
     <TextView
         android:id="@+id/player2HealthTxt"
@@ -256,7 +256,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="537dp"
         android:layout_marginTop="20dp"
-        android:text="Hp" />
+        android:text="100" />
 
     <ImageView
         android:id="@+id/player1WallIcon"

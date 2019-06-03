@@ -271,7 +271,7 @@ public class Gameplay extends AppCompatActivity {
     }
 
 
-    public void refreshHandPlayer(Player player1){//yes
+    public void refreshHandPlayer(Player player1){
         if(player1.getCardsInHand().size()>=1){
             this.cardButton1.setImageResource(findPictureId(player1.getCardsInHand().get(0).getPictureName()));
             this.cardButton1.setVisibility(View.VISIBLE);
