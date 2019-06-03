@@ -398,5 +398,15 @@
         android:layout_marginTop="192dp"
         android:text="999" />
 
+    <Button
+        android:id="@+id/turnToggle"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="313dp"
+        android:layout_marginTop="68dp"
+        android:text="Next turn" />
+
 
 </RelativeLayout>
