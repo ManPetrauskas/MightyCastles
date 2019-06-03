@@ -45,48 +45,14 @@ public class Gameplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameplay);
         showMyHand=false;
-        //Button declaration
-
-        this.cardButton1 = findViewById(R.id.card1Button);
-        this.cardButton2 = findViewById(R.id.card2Button);
-        this.cardButton3 = findViewById(R.id.card3Button);
-        this.cardButton4 = findViewById(R.id.card4Button);
-        this.cardButton5 = findViewById(R.id.card5Button);
-        this.cardButton6 = findViewById(R.id.card6Button);
-
-        //Buttons
-        this.handButton = (Button) findViewById(R.id.showHand);
-        this.handButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showCardsToggle();
-            }
-        });
-
-        this.player1DeckButton = (Button) findViewById(R.id.player1DeckButton);
-        this.player1DeckButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                player1Draw();
-            }
-        });
-
-        this.player2DeckButton = (Button) findViewById(R.id.player2DeckButton);
-        this.player2DeckButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                player2Draw();
-            }
-        });
-
         //Card List creation
         List<Card> cardCollection = new ArrayList<Card>();
-            cardCollection.add( new Card (0, "Castle", 0, 3, 0, 10, "Castle", "CastleCard"));
-            cardCollection.add( new Card (1, "Drake", 21, 0, 0, -40, "Enemy_castle", "DrakeCard"));
-            cardCollection.add( new Card (2, "Thief", 0, 0, 21, 20, "All_resources", "ThiefCard"));
-            cardCollection.add( new Card (3, "Wall", 0, 3, 0, 10, "Wall", "WallCard"));
-            cardCollection.add( new Card (4, "Warrior", 0, 0, 10, -25, "Enemy_castle", "WarriorCard"));
-            cardCollection.add( new Card (5, "Wizard", 21, 0, 0, -40, "Enemy_castle", "WizardCard"));
+        cardCollection.add( new Card (0, "Castle", 0, 3, 0, 10, "Castle", "CastleCard"));
+        cardCollection.add( new Card (1, "Drake", 21, 0, 0, -40, "Enemy_castle", "DrakeCard"));
+        cardCollection.add( new Card (2, "Thief", 0, 0, 21, 20, "All_resources", "ThiefCard"));
+        cardCollection.add( new Card (3, "Wall", 0, 3, 0, 10, "Wall", "WallCard"));
+        cardCollection.add( new Card (4, "Warrior", 0, 0, 10, -25, "Enemy_castle", "WarriorCard"));
+        cardCollection.add( new Card (5, "Wizard", 21, 0, 0, -40, "Enemy_castle", "WizardCard"));
 
 
         //Player 1
@@ -154,6 +120,44 @@ public class Gameplay extends AppCompatActivity {
         this.player2Deck.add(cardCollection.get(1));
 
         Player player2 = new Player(1, this.player2Hand, this.player2Deck, player2Castle);
+        //Button declaration
+
+        this.cardButton1 = findViewById(R.id.card1Button);
+        this.cardButton2 = findViewById(R.id.card2Button);
+        this.cardButton3 = findViewById(R.id.card3Button);
+        this.cardButton4 = findViewById(R.id.card4Button);
+        this.cardButton5 = findViewById(R.id.card5Button);
+        this.cardButton6 = findViewById(R.id.card6Button);
+
+        //Buttons
+        this.handButton = (Button) findViewById(R.id.showHand);
+        this.handButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(player1Turn){
+                    showCardsToggle(player1);
+                }
+            }
+        });
+
+        this.player1DeckButton = (Button) findViewById(R.id.player1DeckButton);
+        this.player1DeckButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                player1Draw();
+            }
+        });
+
+        this.player2DeckButton = (Button) findViewById(R.id.player2DeckButton);
+        this.player2DeckButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                player2Draw();
+            }
+        });
+
+
+
 
     }
 
