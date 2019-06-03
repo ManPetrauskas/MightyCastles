@@ -284,9 +284,9 @@
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="53dp"
+        android:layout_marginStart="65dp"
         android:layout_marginTop="56dp"
-        android:text="TextView" />
+        android:text="999" />
 
     <TextView
         android:id="@+id/player1Bricks"
@@ -294,8 +294,8 @@
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="3dp"
         android:text="999" />
 
     <TextView
@@ -304,7 +304,7 @@
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="53dp"
+        android:layout_marginStart="65dp"
         android:layout_marginTop="103dp"
         android:text="999" />
 
@@ -314,7 +314,7 @@
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="53dp"
+        android:layout_marginStart="65dp"
         android:layout_marginTop="141dp"
         android:text="999" />
 
@@ -324,8 +324,8 @@
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="225dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="229dp"
         android:text="999" />
 
     <TextView
@@ -334,8 +334,8 @@
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="187dp"
         android:text="999" />
 
     <TextView
