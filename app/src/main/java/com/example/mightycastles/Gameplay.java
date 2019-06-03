@@ -39,6 +39,9 @@ public class Gameplay extends AppCompatActivity {
     private boolean showMyHand;
     //textView
     TextView resourceText;
+    //players
+    private Player player1;
+    private Player player2;
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +89,7 @@ public class Gameplay extends AppCompatActivity {
         this.player1Deck.add(cardCollection.get(2));
         this.player1Deck.add(cardCollection.get(1));
 
-        Player player1 = new Player(0, this.player1Hand, this.player1Deck, player1Castle);
+        this.player1 = new Player(0, this.player1Hand, this.player1Deck, player1Castle);
         //Player  2
         Castle player2Castle = new Castle(
                 2,
@@ -119,7 +122,7 @@ public class Gameplay extends AppCompatActivity {
         this.player2Deck.add(cardCollection.get(2));
         this.player2Deck.add(cardCollection.get(1));
 
-        Player player2 = new Player(1, this.player2Hand, this.player2Deck, player2Castle);
+        this.player2 = new Player(1, this.player2Hand, this.player2Deck, player2Castle);
         //Button declaration
 
         this.cardButton1 = findViewById(R.id.card1Button);
