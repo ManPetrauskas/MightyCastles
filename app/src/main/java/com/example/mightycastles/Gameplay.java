@@ -406,4 +406,15 @@ public class Gameplay extends AppCompatActivity {
 
         }
     }
+
+    public void intermission(){
+        this.cardButton1.setImageResource(R.drawable.item_deckback);
+        this.cardButton2.setImageResource(R.drawable.item_deckback);
+        this.cardButton3.setImageResource(R.drawable.item_deckback);
+        this.cardButton4.setImageResource(R.drawable.item_deckback);
+        this.cardButton5.setImageResource(R.drawable.item_deckback);
+        this.cardButton6.setImageResource(R.drawable.item_deckback);
+
+        findViewById(R.id.turnToggle).setVisibility(View.VISIBLE);
+    }
 }
