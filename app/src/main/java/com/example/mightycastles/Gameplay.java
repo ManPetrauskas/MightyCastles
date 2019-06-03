@@ -300,30 +300,52 @@ public class Gameplay extends AppCompatActivity {
         resourceText.setText(plr2.getPlayerCastle().getBlacksmith());
     }
 
-    public void useCardButton1(Player player){
-        if (player.getCardsInHand().size() >= 1){
-
+    public void useCardButton1(Player player1, Player player2){
+        if (player1.getCardsInHand().size() >= 1){
+            cardUse(player1.getCardsInHand().get(0), player1, player2);
+            player1.getCardsInHand().remove(0);
+            refreshHandPlayer1();
         }
     }
 
-    public void useCardButton2(){
-
+    public void useCardButton2(Player player1, Player player2){
+        if (player1.getCardsInHand().size() >= 2){
+            cardUse(player1.getCardsInHand().get(1), player1, player2);
+            player1.getCardsInHand().remove(1);
+            refreshHandPlayer1();
+        }
     }
 
-    public void useCardButton3(){
-
+    public void useCardButton3(Player player1, Player player2){
+        if (player1.getCardsInHand().size() >= 3){
+            cardUse(player1.getCardsInHand().get(2), player1, player2);
+            player1.getCardsInHand().remove(2);
+            refreshHandPlayer1();
+        }
     }
 
-    public void useCardButton4(){
-
+    public void useCardButton4(Player player1, Player player2){
+        if (player1.getCardsInHand().size() >= 4){
+            cardUse(player1.getCardsInHand().get(3), player1, player2);
+            player1.getCardsInHand().remove(3);
+            refreshHandPlayer1();
+        }
     }
 
-    public void useCardButton5(){
-
+    public void useCardButton5(Player player1, Player player2){
+        if (player1.getCardsInHand().size() >= 5){
+            cardUse(player1.getCardsInHand().get(4), player1, player2);
+            player1.getCardsInHand().remove(4);
+            refreshHandPlayer1();
+        }
     }
 
-    public void useCardButton6(){
-
+    public void useCardButton6(Player player1, Player player2){
+        if (player1.getCardsInHand().size() >= 6){
+            cardUse(player1.getCardsInHand().get(5), player1, player2);
+            player1.getCardsInHand().remove(5);
+            refreshHandPlayer1();
+        }
     }
 
     public void cardUse(Card card, Player player1, Player player2){
