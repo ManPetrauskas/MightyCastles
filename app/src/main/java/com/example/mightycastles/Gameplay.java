@@ -46,7 +46,7 @@ public class Gameplay extends AppCompatActivity {
         showMyHand=false;
         player1Turn=false;
         //Card List creation
-        List<Card> cardCollection = new ArrayList<Card>();
+        List<Card> cardCollection = new ArrayList<>();
         cardCollection.add( new Card (0, "Castle", 0, 3, 0, 10, "Castle", "CastleCard"));
         cardCollection.add( new Card (1, "Drake", 21, 0, 0, -40, "Enemy_castle", "DrakeCard"));
         cardCollection.add( new Card (2, "Thief", 0, 0, 21, 20, "All_resources", "ThiefCard"));
@@ -132,7 +132,7 @@ public class Gameplay extends AppCompatActivity {
         this.toggleTurnButton = findViewById(R.id.turnToggle);
 
         //Buttons
-        this.handButton = (Button) findViewById(R.id.showHand);
+        this.handButton = findViewById(R.id.showHand);
         this.handButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,7 +145,7 @@ public class Gameplay extends AppCompatActivity {
             }
         });
 
-        this.player1DeckButton = (Button) findViewById(R.id.player1DeckButton);
+        this.player1DeckButton = findViewById(R.id.player1DeckButton);
         this.player1DeckButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -153,7 +153,7 @@ public class Gameplay extends AppCompatActivity {
             }
         });
 
-        this.player2DeckButton = (Button) findViewById(R.id.player2DeckButton);
+        this.player2DeckButton = findViewById(R.id.player2DeckButton);
         this.player2DeckButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -352,38 +352,38 @@ public class Gameplay extends AppCompatActivity {
     //new
     public void refreshResources(Player plr1,Player plr2){
         //refresh player1
-        this.resourceText=(TextView)findViewById(R.id.player1Bricks);
+        this.resourceText=findViewById(R.id.player1Bricks);
         resourceText.setText(plr1.getPlayerCastle().getBricks());
-        this.resourceText=(TextView)findViewById(R.id.player1Worker);
+        this.resourceText=findViewById(R.id.player1Worker);
         resourceText.setText(plr1.getPlayerCastle().getBuilders());
-        this.resourceText=(TextView)findViewById(R.id.player1Mana);
+        this.resourceText=findViewById(R.id.player1Mana);
         resourceText.setText(plr1.getPlayerCastle().getMana());
-        this.resourceText=(TextView)findViewById(R.id.player1Magic);
+        this.resourceText=findViewById(R.id.player1Magic);
         resourceText.setText(plr1.getPlayerCastle().getMagic());
-        this.resourceText=(TextView)findViewById(R.id.player1Weapons);
+        this.resourceText=findViewById(R.id.player1Weapons);
         resourceText.setText(plr1.getPlayerCastle().getWeapons());
-        this.resourceText=(TextView)findViewById(R.id.player1Blacksmith);
+        this.resourceText=findViewById(R.id.player1Blacksmith);
         resourceText.setText(plr1.getPlayerCastle().getBlacksmith());
-        this.resourceText=(TextView)findViewById(R.id.player1HealthTxt);
+        this.resourceText=findViewById(R.id.player1HealthTxt);
         resourceText.setText(plr1.getPlayerCastle().getCastleHealth());
-        this.resourceText=(TextView)findViewById(R.id.player1WallTxt);
+        this.resourceText=findViewById(R.id.player1WallTxt);
         resourceText.setText(plr1.getPlayerCastle().getWallHealth());
         //refresh player2
-        this.resourceText=(TextView)findViewById(R.id.player2Bricks);
+        this.resourceText=findViewById(R.id.player2Bricks);
         resourceText.setText(plr2.getPlayerCastle().getBricks());
-        this.resourceText=(TextView)findViewById(R.id.player2Worker);
+        this.resourceText=findViewById(R.id.player2Worker);
         resourceText.setText(plr2.getPlayerCastle().getBuilders());
-        this.resourceText=(TextView)findViewById(R.id.player2Mana);
+        this.resourceText=findViewById(R.id.player2Mana);
         resourceText.setText(plr2.getPlayerCastle().getMana());
-        this.resourceText=(TextView)findViewById(R.id.player2Magic);
+        this.resourceText=findViewById(R.id.player2Magic);
         resourceText.setText(plr2.getPlayerCastle().getMagic());
-        this.resourceText=(TextView)findViewById(R.id.player2Weapons);
+        this.resourceText=findViewById(R.id.player2Weapons);
         resourceText.setText(plr2.getPlayerCastle().getWeapons());
-        this.resourceText=(TextView)findViewById(R.id.player2Blacksmith);
+        this.resourceText=findViewById(R.id.player2Blacksmith);
         resourceText.setText(plr2.getPlayerCastle().getBlacksmith());
-        this.resourceText=(TextView)findViewById(R.id.player2HealthTxt);
+        this.resourceText=findViewById(R.id.player2HealthTxt);
         resourceText.setText(plr2.getPlayerCastle().getCastleHealth());
-        this.resourceText=(TextView)findViewById(R.id.player1WallTxt);///
+        this.resourceText=findViewById(R.id.player1WallTxt);///
         resourceText.setText(plr1.getPlayerCastle().getWallHealth());
     }
 
