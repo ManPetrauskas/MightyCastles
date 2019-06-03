@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.mightycastles.mightycastles.classes.Card;
 import com.example.mightycastles.mightycastles.classes.Castle;
+import com.example.mightycastles.mightycastles.classes.Player;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +35,8 @@ public class Gameplay extends AppCompatActivity {
     private List<Card> player2Hand;
     //show
     private boolean showMyHand;
+    //textView
+    TextView resourceText;
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -260,5 +264,13 @@ public class Gameplay extends AppCompatActivity {
                 return R.drawable.card_wizard;
         }
         return R.drawable.icon_castle;
+    }
+    //new
+    public void refreshResources(Player plr1,Player plr2){
+        //refresh player1
+        this.resourceText=(TextView)findViewById(R.id.player1Bricks);
+        resourceText.setText(plr1.getPlayerCastle().getBricks());
+        //refresh player2
+
     }
 }
