@@ -35,8 +35,4 @@ public class MainMeniu extends AppCompatActivity {
         Intent intent = new Intent(this, Options.class);
         startActivity(intent);
     }
-    public void closeOptionActivity(){
-        Intent intent = new Intent(this, Options.class);
-        startActivity(intent);
-    }
 }
