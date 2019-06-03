@@ -296,7 +296,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="53dp"
         android:layout_marginTop="9dp"
-        android:text="TextView" />
+        android:text="999" />
 
     <TextView
         android:id="@+id/player1Mana"
@@ -306,7 +306,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="53dp"
         android:layout_marginTop="103dp"
-        android:text="TextView" />
+        android:text="999" />
 
     <TextView
         android:id="@+id/player1Magic"
@@ -316,7 +316,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="53dp"
         android:layout_marginTop="141dp"
-        android:text="TextView" />
+        android:text="999" />
 
     <TextView
         android:id="@+id/player1Blacksmith"
@@ -326,7 +326,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="53dp"
         android:layout_marginTop="225dp"
-        android:text="TextView" />
+        android:text="999" />
 
     <TextView
         android:id="@+id/player1Weapons"
@@ -336,7 +336,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="53dp"
         android:layout_marginTop="180dp"
-        android:text="TextView" />
+        android:text="999" />
 
     <TextView
         android:id="@+id/player2Worker"
@@ -346,7 +346,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="638dp"
         android:layout_marginTop="58dp"
-        android:text="TextView" />
+        android:text="999" />
 
     <TextView
         android:id="@+id/player2Bricks"
@@ -356,7 +356,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="638dp"
         android:layout_marginTop="8dp"
-        android:text="TextView" />
+        android:text="999" />
 
     <TextView
         android:id="@+id/player2Mana"
@@ -366,7 +366,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="638dp"
         android:layout_marginTop="101dp"
-        android:text="TextView" />
+        android:text="999" />
 
     <TextView
         android:id="@+id/player2Magic"
@@ -376,7 +376,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="638dp"
         android:layout_marginTop="140dp"
-        android:text="TextView" />
+        android:text="999" />
 
     <TextView
         android:id="@+id/player2Weapons"
@@ -386,7 +386,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="638dp"
         android:layout_marginTop="183dp"
-        android:text="TextView" />
+        android:text="999" />
 
     <TextView
         android:id="@+id/player2Blacksmith"
@@ -396,7 +396,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="638dp"
         android:layout_marginTop="226dp"
-        android:text="TextView" />
+        android:text="999" />
 
 
 </RelativeLayout>
