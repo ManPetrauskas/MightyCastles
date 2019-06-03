@@ -30,8 +30,6 @@ public class Gameplay extends AppCompatActivity {
     private ImageButton  cardButton4;
     private ImageButton  cardButton5;
     private ImageButton  cardButton6;
-    //Cards
-
     //show
     private boolean showMyHand;
     //textView
@@ -159,7 +157,78 @@ public class Gameplay extends AppCompatActivity {
             }
         });
 
+        this.cardButton1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(player1Turn){
+                    useCardButton1(player1,player2);
+                }
+                else {
+                    useCardButton1(player2,player1);
+                }
 
+            }
+        });
+        this.cardButton2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(player1Turn){
+                    useCardButton2(player1,player2);
+                }
+                else {
+                    useCardButton2(player2,player1);
+                }
+
+            }
+        });
+        this.cardButton3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(player1Turn){
+                    useCardButton3(player1,player2);
+                }
+                else {
+                    useCardButton3(player2,player1);
+                }
+
+            }
+        });
+        this.cardButton4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(player1Turn){
+                    useCardButton4(player1,player2);
+                }
+                else {
+                    useCardButton4(player2,player1);
+                }
+
+            }
+        });
+        this.cardButton5.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(player1Turn){
+                    useCardButton5(player1,player2);
+                }
+                else {
+                    useCardButton5(player2,player1);
+                }
+
+            }
+        });
+        this.cardButton6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(player1Turn){
+                    useCardButton6(player1,player2);
+                }
+                else {
+                    useCardButton6(player2,player1);
+                }
+
+            }
+        });
 
 
     }
