@@ -178,6 +178,7 @@ public class Gameplay extends AppCompatActivity {
             this.player1Hand.add(this.player1Deck.get(randomNumber));
             this.player1Deck.remove(randomNumber);
         }
+        refreshHandPlayer1();
     }
 
     public void player2Draw(){  //your turn yugi, draw your last pathetic card
