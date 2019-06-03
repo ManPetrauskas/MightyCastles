@@ -285,7 +285,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="65dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="62dp"
         android:text="999" />
 
     <TextView
@@ -295,7 +295,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="65dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="16dp"
         android:text="999" />
 
     <TextView
@@ -305,7 +305,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="65dp"
-        android:layout_marginTop="103dp"
+        android:layout_marginTop="110dp"
         android:text="999" />
 
     <TextView
@@ -315,7 +315,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="65dp"
-        android:layout_marginTop="141dp"
+        android:layout_marginTop="145dp"
         android:text="999" />
 
     <TextView
@@ -325,7 +325,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="65dp"
-        android:layout_marginTop="229dp"
+        android:layout_marginTop="235dp"
         android:text="999" />
 
     <TextView
@@ -335,7 +335,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="65dp"
-        android:layout_marginTop="187dp"
+        android:layout_marginTop="192dp"
         android:text="999" />
 
     <TextView
@@ -345,7 +345,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="638dp"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="62dp"
         android:text="999" />
 
     <TextView
@@ -355,7 +355,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="638dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="999" />
 
     <TextView
@@ -365,7 +365,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="638dp"
-        android:layout_marginTop="101dp"
+        android:layout_marginTop="110dp"
         android:text="999" />
 
     <TextView
@@ -375,7 +375,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="638dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="145dp"
         android:text="999" />
 
     <TextView
@@ -385,7 +385,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="638dp"
-        android:layout_marginTop="183dp"
+        android:layout_marginTop="235dp"
         android:text="999" />
 
     <TextView
@@ -395,7 +395,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="638dp"
-        android:layout_marginTop="226dp"
+        android:layout_marginTop="192dp"
         android:text="999" />
 
 
