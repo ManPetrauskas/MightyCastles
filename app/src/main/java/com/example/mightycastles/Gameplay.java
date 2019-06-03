@@ -140,6 +140,9 @@ public class Gameplay extends AppCompatActivity {
                 if(player1Turn){
                     showCardsToggle(player1);
                 }
+                else{
+                    showCardsToggle(player2);
+                }
             }
         });
 
@@ -147,7 +150,7 @@ public class Gameplay extends AppCompatActivity {
         this.player1DeckButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                player1Draw();
+                player1Draw(player1);
             }
         });
 
@@ -155,7 +158,7 @@ public class Gameplay extends AppCompatActivity {
         this.player2DeckButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                player2Draw();
+                player2Draw(player2);
             }
         });
 
@@ -314,7 +317,7 @@ public class Gameplay extends AppCompatActivity {
         if (player1.getCardsInHand().size() >= 1){
             cardUse(player1.getCardsInHand().get(0), player1, player2);
             player1.getCardsInHand().remove(0);
-            refreshHandPlayer1();
+            refreshHandPlayer1(player1);
         }
     }
 
@@ -322,7 +325,7 @@ public class Gameplay extends AppCompatActivity {
         if (player1.getCardsInHand().size() >= 2){
             cardUse(player1.getCardsInHand().get(1), player1, player2);
             player1.getCardsInHand().remove(1);
-            refreshHandPlayer1();
+            refreshHandPlayer1(player1);
         }
     }
 
@@ -330,7 +333,7 @@ public class Gameplay extends AppCompatActivity {
         if (player1.getCardsInHand().size() >= 3){
             cardUse(player1.getCardsInHand().get(2), player1, player2);
             player1.getCardsInHand().remove(2);
-            refreshHandPlayer1();
+            refreshHandPlayer1(player1);
         }
     }
 
@@ -338,7 +341,7 @@ public class Gameplay extends AppCompatActivity {
         if (player1.getCardsInHand().size() >= 4){
             cardUse(player1.getCardsInHand().get(3), player1, player2);
             player1.getCardsInHand().remove(3);
-            refreshHandPlayer1();
+            refreshHandPlayer1(player1);
         }
     }
 
@@ -346,7 +349,7 @@ public class Gameplay extends AppCompatActivity {
         if (player1.getCardsInHand().size() >= 5){
             cardUse(player1.getCardsInHand().get(4), player1, player2);
             player1.getCardsInHand().remove(4);
-            refreshHandPlayer1();
+            refreshHandPlayer1(player1);
         }
     }
 
@@ -354,7 +357,7 @@ public class Gameplay extends AppCompatActivity {
         if (player1.getCardsInHand().size() >= 6){
             cardUse(player1.getCardsInHand().get(5), player1, player2);
             player1.getCardsInHand().remove(5);
-            refreshHandPlayer1();
+            refreshHandPlayer1(player1);
         }
     }
 
