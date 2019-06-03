@@ -79,12 +79,12 @@ public class Gameplay extends AppCompatActivity {
 
         //Card List creation
         List<Card> cardCollection = new ArrayList<Card>();
-            cardCollection.add( new Card (0, "Castle", 0, 3, 0, 10, "Castle", "@drawable/CastleCard"));
-            cardCollection.add( new Card (1, "Drake", 21, 0, 0, 40, "Enemy_castle", "@drawable/DrakeCard"));
-            cardCollection.add( new Card (2, "Thief", 0, 0, 21, 20, "All_resources", "@drawable/ThiefCard"));
-            cardCollection.add( new Card (3, "Wall", 0, 3, 0, 10, "Wall", "@drawable/WallCard"));
-            cardCollection.add( new Card (4, "Warrior", 0, 0, 10, 25, "Enemy_castle", "@drawable/WarriorCard"));
-            cardCollection.add( new Card (5, "Wizard", 21, 0, 0, 40, "Enemy_castle", "@drawable/WizardCard"));
+            cardCollection.add( new Card (0, "Castle", 0, 3, 0, 10, "Castle", "CastleCard"));
+            cardCollection.add( new Card (1, "Drake", 21, 0, 0, 40, "Enemy_castle", "DrakeCard"));
+            cardCollection.add( new Card (2, "Thief", 0, 0, 21, 20, "All_resources", "ThiefCard"));
+            cardCollection.add( new Card (3, "Wall", 0, 3, 0, 10, "Wall", "WallCard"));
+            cardCollection.add( new Card (4, "Warrior", 0, 0, 10, 25, "Enemy_castle", "WarriorCard"));
+            cardCollection.add( new Card (5, "Wizard", 21, 0, 0, 40, "Enemy_castle", "WizardCard"));
 
 
         //Player 1
