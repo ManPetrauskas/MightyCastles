@@ -298,4 +298,28 @@ public class Gameplay extends AppCompatActivity {
         this.resourceText=(TextView)findViewById(R.id.player2Blacksmith);
         resourceText.setText(plr2.getPlayerCastle().getBlacksmith());
     }
+
+    public void useCardButton1(){
+
+    }
+
+    public void useCardButton2(){
+
+    }
+
+    public void useCardButton3(){
+
+    }
+
+    public void useCardButton4(){
+
+    }
+
+    public void useCardButton5(){
+
+    }
+
+    public void useCardButton6(){
+
+    }
 }
