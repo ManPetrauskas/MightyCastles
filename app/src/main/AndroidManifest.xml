@@ -14,6 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainMeniu">
             android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,12 +23,15 @@
         </activity>
         <activity android:name=".Play">
             android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
         </activity>
         <activity android:name=".Options">
             android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
         </activity>
         <activity android:name=".Gameplay">
             android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
         </activity>
     </application>
 
