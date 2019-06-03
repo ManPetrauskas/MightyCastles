@@ -155,9 +155,9 @@ public class Gameplay extends AppCompatActivity {
 
     }
 
-    public void showCardsToggle(){
+    public void showCardsToggle(Player player){
         if (this.showMyHand){
-            refreshHandPlayer1();
+            refreshHandPlayer1(player);
             this.showMyHand=false;
         }
         else{
@@ -169,7 +169,7 @@ public class Gameplay extends AppCompatActivity {
             this.showMyHand=true;
         }
     }
-    public void player1Draw(){
+    public void player1Draw(Player player1){
         Random r = new Random();
         int rMax = this.player1Deck.size() - 1;
         int randomNumber = r.nextInt((rMax)+1);
@@ -178,10 +178,10 @@ public class Gameplay extends AppCompatActivity {
             this.player1Hand.add(this.player1Deck.get(randomNumber));
             this.player1Deck.remove(randomNumber);
         }
-        refreshHandPlayer1();
+        refreshHandPlayer1(player1);
     }
 
-    public void player2Draw(){  //your turn yugi, draw your last pathetic card
+    public void player2Draw(Player player){  //your turn yugi, draw your last pathetic card
         Random r = new Random();
         int rMax = this.player2Deck.size() - 1;
         int randomNumber = r.nextInt((rMax)+1);
@@ -190,6 +190,7 @@ public class Gameplay extends AppCompatActivity {
             this.player2Hand.add(this.player2Deck.get(randomNumber));
             this.player2Deck.remove(randomNumber);
         }
+        refreshHandPlayer1(player);
     }
 
     public void refreshHandPlayer1(Player player1){
