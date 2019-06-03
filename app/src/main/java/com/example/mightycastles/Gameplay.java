@@ -118,6 +118,7 @@ public class Gameplay extends AppCompatActivity {
         player2Deck.add(cardCollection.get(1));
 
         this.player2 = new Player(1, player2Hand, player2Deck, player2Castle);
+        refreshResources(player1,player2);
         //Button declaration
 
         this.cardButton1 = findViewById(R.id.card1Button);
@@ -353,6 +354,10 @@ public class Gameplay extends AppCompatActivity {
         resourceText.setText(plr1.getPlayerCastle().getWeapons());
         this.resourceText=(TextView)findViewById(R.id.player1Blacksmith);
         resourceText.setText(plr1.getPlayerCastle().getBlacksmith());
+        this.resourceText=(TextView)findViewById(R.id.player1HealthTxt);
+        resourceText.setText(plr1.getPlayerCastle().getCastleHealth());
+        this.resourceText=(TextView)findViewById(R.id.player1WallTxt);
+        resourceText.setText(plr1.getPlayerCastle().getWallHealth());
         //refresh player2
         this.resourceText=(TextView)findViewById(R.id.player2Bricks);
         resourceText.setText(plr2.getPlayerCastle().getBricks());
@@ -366,6 +371,10 @@ public class Gameplay extends AppCompatActivity {
         resourceText.setText(plr2.getPlayerCastle().getWeapons());
         this.resourceText=(TextView)findViewById(R.id.player2Blacksmith);
         resourceText.setText(plr2.getPlayerCastle().getBlacksmith());
+        this.resourceText=(TextView)findViewById(R.id.player2HealthTxt);
+        resourceText.setText(plr2.getPlayerCastle().getCastleHealth());
+        this.resourceText=(TextView)findViewById(R.id.player1WallTxt);///
+        resourceText.setText(plr1.getPlayerCastle().getWallHealth());
     }
 
     public void useCardButton1(Player player1, Player player2){
