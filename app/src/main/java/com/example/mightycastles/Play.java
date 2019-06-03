@@ -24,11 +24,11 @@ public class Play extends AppCompatActivity {
         });
     }
     public void openGameplayActivity(){
-        player1Name= findViewById(R.id.player1NameText);
-        player2Name= findViewById(R.id.player2NameText);
+        //player1Name= findViewById(R.id.player1NameText);
+        //player2Name= findViewById(R.id.player2NameText);
         Intent intent = new Intent(this, Gameplay.class);
-        intent.putExtra("GetPlayer1Name",player1Name.getText());
-        intent.putExtra("GetPlayer2Name",player2Name.getText());
+        //intent.putExtra("GetPlayer1Name",player1Name.getText());
+        //intent.putExtra("GetPlayer2Name",player2Name.getText());
         startActivity(intent);
     }
 }
