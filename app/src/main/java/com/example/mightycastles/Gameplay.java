@@ -21,6 +21,8 @@ public class Gameplay extends AppCompatActivity {
     private Button handButton;
     private Button player1DeckButton;
     private Button player2DeckButton;
+    //Turn
+    private boolean player1Turn;
     //Card buttons
     private ImageButton cardButton1;
     private ImageButton  cardButton2;
