@@ -58,7 +58,7 @@ public class Gameplay extends AppCompatActivity {
         //Player 1
         Castle player1Castle = new Castle(
                 1,
-                "Player1",
+                getIntent().getStringExtra("GetPlayer1Name"),
                 25,
                 0,
                 10,
@@ -90,7 +90,7 @@ public class Gameplay extends AppCompatActivity {
         //Player  2
         Castle player2Castle = new Castle(
                 2,
-                "Player2",
+                getIntent().getStringExtra("GetPlayer2Name"),
                 25,
                 0,
                 10,
