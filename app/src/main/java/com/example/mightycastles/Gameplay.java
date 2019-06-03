@@ -83,8 +83,8 @@ public class Gameplay extends AppCompatActivity {
             cardCollection.add( new Card (1, "Drake", 21, 0, 0, -40, "Enemy_castle", "DrakeCard"));
             cardCollection.add( new Card (2, "Thief", 0, 0, 21, 20, "All_resources", "ThiefCard"));
             cardCollection.add( new Card (3, "Wall", 0, 3, 0, 10, "Wall", "WallCard"));
-            cardCollection.add( new Card (4, "Warrior", 0, 0, 10, 25, "Enemy_castle", "WarriorCard"));
-            cardCollection.add( new Card (5, "Wizard", 21, 0, 0, 40, "Enemy_castle", "WizardCard"));
+            cardCollection.add( new Card (4, "Warrior", 0, 0, 10, -25, "Enemy_castle", "WarriorCard"));
+            cardCollection.add( new Card (5, "Wizard", 21, 0, 0, -40, "Enemy_castle", "WizardCard"));
 
 
         //Player 1
@@ -335,7 +335,40 @@ public class Gameplay extends AppCompatActivity {
                 player2.getPlayerCastle().addCastleHealth(card.getCalculation());
                 break;
             case "All_resources":
-                
+                if(player2.getPlayerCastle().getBricks() >= card.getCalculation()){
+                    player2.getPlayerCastle().addBricks(card.getCalculation()*-1);
+                    player1.getPlayerCastle().addBricks(card.getCalculation());
+                }
+                else{
+                    player1.getPlayerCastle().addBricks(player2.getPlayerCastle().getBricks());
+                    player2.getPlayerCastle().addBricks(player2.getPlayerCastle().getBricks()*-1);
+                }
+                if(player2.getPlayerCastle().getMana() >= card.getCalculation()){
+                    player2.getPlayerCastle().addMana(card.getCalculation()*-1);
+                    player1.getPlayerCastle().addMana(card.getCalculation());
+                }
+                else{
+                    player1.getPlayerCastle().addMana(player2.getPlayerCastle().getMana());
+                    player2.getPlayerCastle().addMana(player2.getPlayerCastle().getMana()*-1);
+                }
+                if(player2.getPlayerCastle().getWeapons() >= card.getCalculation()){
+                    player2.getPlayerCastle().addWeapons(card.getCalculation()*-1);
+                    player1.getPlayerCastle().addWeapons(card.getCalculation());
+                }
+                else{
+                    player1.getPlayerCastle().addWeapons(player2.getPlayerCastle().getWeapons());
+                    player2.getPlayerCastle().addWeapons(player2.getPlayerCastle().getWeapons()*-1);
+                }
+                break;
+            case "Wall":
+                if(player1.getPlayerCastle().getWallHealth()>=card.getCalculation()){
+                    player1.getPlayerCastle().addWallHealth(card.getCalculation());
+                }
+                else{
+                    player1.getPlayerCastle().setWallHealth(0);
+                }
+                break;
+
         }
     }
 }

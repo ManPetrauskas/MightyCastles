@@ -100,4 +100,32 @@ public class Castle {
     public void addCastleHealth(int plus){
         this.castleHealth+=plus;
     }
+
+    public void addWallHealth(int plus){
+        this.wallHealth+=plus;
+    }
+
+    public void addBricks(int plus){
+        this.bricks+=plus;
+    }
+
+    public void addBuilders(int plus){
+        this.builders+=plus;
+    }
+
+    public void addMana(int plus){
+        this.mana+=plus;
+    }
+
+    public void addMagic(int plus){
+        this.magic+=plus;
+    }
+
+    public void addWeapons(int plus){
+        this.weapons+=plus;
+    }
+
+    public void addBlacksmith(int plus){
+        this.blacksmith+=plus;
+    }
 }
