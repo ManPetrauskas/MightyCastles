@@ -117,6 +117,8 @@ public class Gameplay extends AppCompatActivity {
         this.player1Deck.add(cardCollection.get(3));
         this.player1Deck.add(cardCollection.get(2));
         this.player1Deck.add(cardCollection.get(1));
+
+        Player player1 = new Player(0, this.player1Hand, this.player1Deck, player1Castle);
         //Player  2
         Castle player2Castle = new Castle(
                 2,
@@ -149,8 +151,10 @@ public class Gameplay extends AppCompatActivity {
         this.player2Deck.add(cardCollection.get(2));
         this.player2Deck.add(cardCollection.get(1));
 
+        Player player2 = new Player(1, this.player2Hand, this.player2Deck, player2Castle);
 
     }
+
     public void showCardsToggle(){
         if (this.showMyHand){
             refreshHandPlayer1();
