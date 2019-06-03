@@ -31,10 +31,7 @@ public class Gameplay extends AppCompatActivity {
     private ImageButton  cardButton5;
     private ImageButton  cardButton6;
     //Cards
-    private List<Card> player1Deck;
-    private List<Card> player2Deck;
-    private List<Card> player1Hand;
-    private List<Card> player2Hand;
+
     //show
     private boolean showMyHand;
     //textView
@@ -71,25 +68,25 @@ public class Gameplay extends AppCompatActivity {
                 10,
                 2
         );
-        this.player1Deck=new ArrayList<>();
-        this.player1Hand=new ArrayList<>();
-        this.player1Deck.add(cardCollection.get(5));
-        this.player1Deck.add(cardCollection.get(4));
-        this.player1Deck.add(cardCollection.get(3));
-        this.player1Deck.add(cardCollection.get(2));
-        this.player1Deck.add(cardCollection.get(1));
-        this.player1Deck.add(cardCollection.get(0));
-        this.player1Deck.add(cardCollection.get(1));
-        this.player1Deck.add(cardCollection.get(2));
-        this.player1Deck.add(cardCollection.get(3));
-        this.player1Deck.add(cardCollection.get(4));
-        this.player1Deck.add(cardCollection.get(5));
-        this.player1Deck.add(cardCollection.get(4));
-        this.player1Deck.add(cardCollection.get(3));
-        this.player1Deck.add(cardCollection.get(2));
-        this.player1Deck.add(cardCollection.get(1));
+        ArrayList<Card> player1Deck=new ArrayList<>();
+        ArrayList<Card> player1Hand=new ArrayList<>();
+        player1Deck.add(cardCollection.get(5));
+        player1Deck.add(cardCollection.get(4));
+        player1Deck.add(cardCollection.get(3));
+        player1Deck.add(cardCollection.get(2));
+        player1Deck.add(cardCollection.get(1));
+        player1Deck.add(cardCollection.get(0));
+        player1Deck.add(cardCollection.get(1));
+        player1Deck.add(cardCollection.get(2));
+        player1Deck.add(cardCollection.get(3));
+        player1Deck.add(cardCollection.get(4));
+        player1Deck.add(cardCollection.get(5));
+        player1Deck.add(cardCollection.get(4));
+        player1Deck.add(cardCollection.get(3));
+        player1Deck.add(cardCollection.get(2));
+        player1Deck.add(cardCollection.get(1));
 
-        this.player1 = new Player(0, this.player1Hand, this.player1Deck, player1Castle);
+        this.player1 = new Player(0, player1Hand, player1Deck, player1Castle);
         //Player  2
         Castle player2Castle = new Castle(
                 2,
@@ -104,25 +101,25 @@ public class Gameplay extends AppCompatActivity {
                 2
         );
 
-        this.player2Deck = new ArrayList<>();
-        this.player2Hand = new ArrayList<>();
-        this.player2Deck.add(cardCollection.get(5));
-        this.player2Deck.add(cardCollection.get(4));
-        this.player2Deck.add(cardCollection.get(3));
-        this.player2Deck.add(cardCollection.get(2));
-        this.player2Deck.add(cardCollection.get(1));
-        this.player2Deck.add(cardCollection.get(0));
-        this.player2Deck.add(cardCollection.get(1));
-        this.player2Deck.add(cardCollection.get(2));
-        this.player2Deck.add(cardCollection.get(3));
-        this.player2Deck.add(cardCollection.get(4));
-        this.player2Deck.add(cardCollection.get(5));
-        this.player2Deck.add(cardCollection.get(4));
-        this.player2Deck.add(cardCollection.get(3));
-        this.player2Deck.add(cardCollection.get(2));
-        this.player2Deck.add(cardCollection.get(1));
+        ArrayList<Card> player2Deck = new ArrayList<>();
+        ArrayList<Card> player2Hand = new ArrayList<>();
+        player2Deck.add(cardCollection.get(5));
+        player2Deck.add(cardCollection.get(4));
+        player2Deck.add(cardCollection.get(3));
+        player2Deck.add(cardCollection.get(2));
+        player2Deck.add(cardCollection.get(1));
+        player2Deck.add(cardCollection.get(0));
+        player2Deck.add(cardCollection.get(1));
+        player2Deck.add(cardCollection.get(2));
+        player2Deck.add(cardCollection.get(3));
+        player2Deck.add(cardCollection.get(4));
+        player2Deck.add(cardCollection.get(5));
+        player2Deck.add(cardCollection.get(4));
+        player2Deck.add(cardCollection.get(3));
+        player2Deck.add(cardCollection.get(2));
+        player2Deck.add(cardCollection.get(1));
 
-        this.player2 = new Player(1, this.player2Hand, this.player2Deck, player2Castle);
+        this.player2 = new Player(1, player2Hand, player2Deck, player2Castle);
         //Button declaration
 
         this.cardButton1 = findViewById(R.id.card1Button);
@@ -158,7 +155,7 @@ public class Gameplay extends AppCompatActivity {
         this.player2DeckButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                player2Draw(player2);
+                player1Draw(player2);
             }
         });
 
@@ -181,29 +178,18 @@ public class Gameplay extends AppCompatActivity {
             this.showMyHand=true;
         }
     }
-    public void player1Draw(Player player1){
+    public void player1Draw(Player player){
         Random r = new Random();
-        int rMax = this.player1Deck.size() - 1;
+        int rMax = player.getCardsInDeck().size() - 1;
         int randomNumber = r.nextInt((rMax)+1);
 
-        if (rMax >= 0 && this.player1Hand.size()<5 && this.player1Deck.size()>=1){
-            this.player1Hand.add(this.player1Deck.get(randomNumber));
-            this.player1Deck.remove(randomNumber);
-        }
-        refreshHandPlayer1(player1);
-    }
-
-    public void player2Draw(Player player){  //your turn yugi, draw your last pathetic card
-        Random r = new Random();
-        int rMax = this.player2Deck.size() - 1;
-        int randomNumber = r.nextInt((rMax)+1);
-
-        if (rMax >= 0 && this.player2Hand.size()<5 && this.player2Deck.size()>=1){
-            this.player2Hand.add(this.player2Deck.get(randomNumber));
-            this.player2Deck.remove(randomNumber);
+        if (rMax >= 0 && player.getCardsInHand().size()<6 && player.getCardsInDeck().size()>=1){
+            player.getCardsInHand().add(player.getCardsInDeck().get(randomNumber));
+            player.getCardsInDeck().remove(randomNumber);
         }
         refreshHandPlayer1(player);
     }
+
 
     public void refreshHandPlayer1(Player player1){
         if(player1.getCardsInHand().size()>=1){
