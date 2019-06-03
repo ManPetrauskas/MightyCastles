@@ -21,6 +21,7 @@ public class Gameplay extends AppCompatActivity {
     private Button handButton;
     private Button player1DeckButton;
     private Button player2DeckButton;
+    private Button toggleTurnButton;
     //Turn
     private boolean player1Turn;
     //Card buttons
@@ -43,6 +44,7 @@ public class Gameplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameplay);
         showMyHand=false;
+        player1Turn=false;
         //Card List creation
         List<Card> cardCollection = new ArrayList<Card>();
         cardCollection.add( new Card (0, "Castle", 0, 3, 0, 10, "Castle", "CastleCard"));
@@ -127,6 +129,7 @@ public class Gameplay extends AppCompatActivity {
         this.cardButton4 = findViewById(R.id.card4Button);
         this.cardButton5 = findViewById(R.id.card5Button);
         this.cardButton6 = findViewById(R.id.card6Button);
+        this.toggleTurnButton = findViewById(R.id.turnToggle);
 
         //Buttons
         this.handButton = (Button) findViewById(R.id.showHand);
@@ -231,6 +234,13 @@ public class Gameplay extends AppCompatActivity {
             }
         });
 
+        this.toggleTurnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        intermission();
 
     }
 
@@ -394,6 +404,7 @@ public class Gameplay extends AppCompatActivity {
 
             }
         }
+        intermission();
 
     }
 
@@ -413,6 +424,7 @@ public class Gameplay extends AppCompatActivity {
 
             }
         }
+        intermission();
     }
 
     public void useCardButton3(Player player1, Player player2){
@@ -431,6 +443,7 @@ public class Gameplay extends AppCompatActivity {
 
             }
         }
+        intermission();
     }
 
     public void useCardButton4(Player player1, Player player2){
@@ -449,6 +462,7 @@ public class Gameplay extends AppCompatActivity {
 
             }
         }
+        intermission();
     }
 
     public void useCardButton5(Player player1, Player player2){
@@ -467,6 +481,7 @@ public class Gameplay extends AppCompatActivity {
 
             }
         }
+        intermission();
     }
 
     public void useCardButton6(Player player1, Player player2){
@@ -485,6 +500,7 @@ public class Gameplay extends AppCompatActivity {
 
             }
         }
+        intermission();
     }
 
     public void cardUse(Card card, Player player1, Player player2){
@@ -542,5 +558,15 @@ public class Gameplay extends AppCompatActivity {
         this.cardButton6.setImageResource(R.drawable.item_deckback);
 
         findViewById(R.id.turnToggle).setVisibility(View.VISIBLE);
+    }
+    public void nextTurnt(Player player1,Player player2){
+        if(this.player1Turn){
+            this.player1Turn= false;
+            refreshHandPlayer1(player2);
+        }
+        else{
+            this.player1Turn=true;
+            refreshHandPlayer1(player1);
+        }
     }
 }
